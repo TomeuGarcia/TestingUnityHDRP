@@ -10,18 +10,10 @@ namespace TextureGeneration
     {
         public override void OnGUI(Rect position, SerializedProperty property, GUIContent label)
         {
-            EditorGUILayout.LabelField("ALPHABET");
-
-            EditorGUILayout.PropertyField(property.FindPropertyRelative("_alphabetTexture"));
-            EditorGUILayout.PropertyField(property.FindPropertyRelative("_renderTextureFormat"));
-            EditorGUILayout.PropertyField(property.FindPropertyRelative("_renderTextureReadWrite"));
-
+            EditorGUILayout.LabelField("Alphabet Elements");
             EditorGUILayout.IntSlider(property.FindPropertyRelative("_rows"), 1, 16);
             EditorGUILayout.IntSlider(property.FindPropertyRelative("_columns"), 1, 16);
-
             EditorGUILayout.Space();
-            EditorGUILayout.LabelField("ELEMENTS");
-
             DrawElementsList(
                 property.FindPropertyRelative("_elements"), 
                 property.FindPropertyRelative("_rows").intValue, 
@@ -43,48 +35,48 @@ namespace TextureGeneration
             GUILayoutOption[] areaOptions = new[] { GUILayout.Width(width), GUILayout.Height(18 + 20) };
             GUILayoutOption[] options = new[] { GUILayout.Width(width) };
 
+            int originalIndentLevel = EditorGUI.indentLevel;
+            EditorGUI.indentLevel = 1;
+            EditorGUILayout.BeginVertical();
 
-            if (list.isExpanded)
+            int i = 0;
+            for (int rowI = 0; rowI < rows; ++rowI)
             {
-                EditorGUILayout.BeginVertical();
-
-                int i = 0;
-                for (int rowI = 0; rowI < rows; ++rowI)
+                EditorGUILayout.BeginHorizontal();
+                for (int columnI = 0; columnI < columns; ++columnI)
                 {
-                    EditorGUILayout.BeginHorizontal();
-                    for (int columnI = 0; columnI < columns; ++columnI)
+                    if (i < list.arraySize)
                     {
-                        if (i < list.arraySize)
-                        {
-                            SerializedProperty element = list.GetArrayElementAtIndex(i);
+                        SerializedProperty element = list.GetArrayElementAtIndex(i);
 
-                            SerializedProperty serializedProperty_character = element.FindPropertyRelative("_character");
-                            SerializedProperty serializedProperty_widthRatio = element.FindPropertyRelative("_widthRatio");
+                        SerializedProperty serializedProperty_character = element.FindPropertyRelative("_character");
+                        SerializedProperty serializedProperty_widthRatio = element.FindPropertyRelative("_widthRatio");
 
-                            Rect r = EditorGUILayout.BeginVertical(areaOptions);
-                            r.x += 1; r.y -= 1;
-                            r.width -= 2; r.height -= 2;
-                            EditorGUI.DrawRect(r, Color.LerpUnclamped(Color.gray, Color.black, 0.75f));
+                        Rect r = EditorGUILayout.BeginVertical(areaOptions);
+                        r.x += 1 + 9; r.y -= 1;
+                        r.width -= 2 + 4; r.height -= 1;
+                        EditorGUI.DrawRect(r, Color.LerpUnclamped(Color.gray, Color.black, 0.75f));
 
-                            string t = ((char)(serializedProperty_character.intValue)).ToString();
-                            t = EditorGUILayout.TextField(t, style, options);
-                            serializedProperty_character.intValue = t.Length > 0 ? t[0] : 0;
+                        string t = ((char)(serializedProperty_character.intValue)).ToString();
+                        t = EditorGUILayout.TextField(t, style, options);
+                        serializedProperty_character.intValue = t.Length > 0 ? t[0] : 0;
 
-                            EditorGUILayout.Slider(serializedProperty_widthRatio, 0.0f, 1.0f, GUIContent.none, options);
-                            EditorGUILayout.EndVertical();
-                        }
+                        //EditorGUILayout.LabelField("W:", options);
+                        EditorGUILayout.Slider(serializedProperty_widthRatio, 0.0f, 1.0f, GUIContent.none, options);
 
-                        ++i;
+                        EditorGUILayout.EndVertical();
                     }
-                    EditorGUILayout.EndHorizontal();
-                    EditorGUILayout.Space(2);
-                }
 
-                EditorGUILayout.EndVertical();
+                    ++i;
+                }
+                EditorGUILayout.EndHorizontal();
                 EditorGUILayout.Space(2);
             }
 
-            //EditorGUI.indentLevel -= 1;
+            EditorGUILayout.EndVertical();
+            EditorGUILayout.Space(2);
+
+            EditorGUI.indentLevel = originalIndentLevel;
         }
 
     }

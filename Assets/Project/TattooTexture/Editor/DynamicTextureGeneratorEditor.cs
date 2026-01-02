@@ -6,15 +6,15 @@ using UnityEngine;
 namespace TextureGeneration
 {
 
-    [CustomEditor(typeof(DynamicTextureGenerator))]
+    [CustomEditor(typeof(AlphabetTextureDrawerTester))]
     public class DynamicTextureGeneratorEditor : UnityEditor.Editor
     {
-        private DynamicTextureGenerator _dynamicTextureGenerator;
+        private AlphabetTextureDrawerTester _dynamicTextureGenerator;
 
 
         private void OnEnable()
         {
-            _dynamicTextureGenerator = (DynamicTextureGenerator)target;
+            _dynamicTextureGenerator = (AlphabetTextureDrawerTester)target;
         }
 
         public override void OnInspectorGUI()
@@ -24,9 +24,9 @@ namespace TextureGeneration
             Color originalColor = GUI.color;
             GUI.color = Color.LerpUnclamped(Color.green, Color.cyan, 0.75f);
 
-            if (GUILayout.Button("Bake Text Entries"))
+            if (GUILayout.Button("Draw Text Entries"))
             {
-                _dynamicTextureGenerator.BakeTextEntries();
+                _dynamicTextureGenerator.DrawTextEntries();
             }
 
             GUI.color = originalColor;

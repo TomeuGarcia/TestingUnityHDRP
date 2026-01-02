@@ -7,23 +7,13 @@ namespace TextureGeneration
 {
     [System.Serializable]
     public class Alphabet
-    {        
-        [SerializeField] private Texture2D _alphabetTexture;
-        [SerializeField] private RenderTextureFormat _renderTextureFormat = RenderTextureFormat.ARGB32;
-        [SerializeField] private RenderTextureReadWrite _renderTextureReadWrite = RenderTextureReadWrite.Default;
+    {
         [SerializeField, Min(1)] private int _rows = 5;
         [SerializeField, Min(1)] private int _columns = 6;
+        [SerializeField] private List<AlphabetElement> _elements = new List<AlphabetElement>(1);
 
-        [SerializeField] private List<AlphabetElement> _elements;
-
-        public Texture2D AlphabetTexture => _alphabetTexture;
-        public RenderTextureFormat RenderTextureFormat => _renderTextureFormat;
-        public RenderTextureReadWrite RenderTextureReadWrite => _renderTextureReadWrite;
         public int Rows => _rows;
         public int Columns => _columns;
-        public int PixelsPerRow => _alphabetTexture == null ? 0 : _alphabetTexture.height / _rows;
-        public int PixelsPerColumn => _alphabetTexture == null ? 0 : _alphabetTexture.width / _columns;
-        public Vector2Int TextureTileSize => new Vector2Int(PixelsPerColumn, PixelsPerRow);
 
 
         public void Validate()
