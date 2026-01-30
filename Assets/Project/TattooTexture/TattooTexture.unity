@@ -24,7 +24,7 @@ RenderSettings:
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 1
-  m_AmbientMode: 4
+  m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
   m_SkyboxMaterial: {fileID: 0}
   m_HaloStrength: 0.5
@@ -811,48 +811,40 @@ MonoBehaviour:
   _configuration:
     _texturesPairs:
     - _alphabetTextureToCopy:
-        _texture: {fileID: 2800000, guid: c868c2a12fc72c84da514dbc25ce7d74, type: 3}
+        _texture: {fileID: 2800000, guid: a68303563596a5c4fb5296ce41d32d7b, type: 3}
         _depthBufferBits: 0
         _renderTextureFormat: 0
         _renderTextureReadWrite: 0
       _textureToDrawTo:
-        _width: 1024
-        _height: 853
+        _width: 2048
+        _height: 2048
         _format: 5
         _mipChain: 1
         _linear: 1
         _createUninitialized: 0
         _backgroundColor: {r: 1, g: 1, b: 1, a: 0}
     - _alphabetTextureToCopy:
-        _texture: {fileID: 2800000, guid: c868c2a12fc72c84da514dbc25ce7d74, type: 3}
+        _texture: {fileID: 2800000, guid: 9d9423fef9d2800489bb3c8f5871cb56, type: 3}
         _depthBufferBits: 0
         _renderTextureFormat: 0
         _renderTextureReadWrite: 0
       _textureToDrawTo:
-        _width: 1024
-        _height: 853
+        _width: 2048
+        _height: 2048
         _format: 5
         _mipChain: 1
         _linear: 1
         _createUninitialized: 0
         _backgroundColor: {r: 1, g: 1, b: 1, a: 0}
-    _alphabetSO: {fileID: 11400000, guid: 1b41dcc137a58b340930d62e28c1929d, type: 2}
+    _alphabetSO: {fileID: 11400000, guid: 0421a4ff94e17914385b997cfce0a75b, type: 2}
   _displayRenderer: {fileID: 825708921}
   _materialTextureProperty: _BaseColorTexture
-  _materialTextureProperty2: _BaseColorTexture2
+  _materialTextureProperty2: _NormalMapTexture
   _autoDrawUpdate: 0
   _textEntries:
     _entries:
     - _text: ABCDEF
       _offset: {x: 0, y: 0}
-    - _text: GHIJKL
-      _offset: {x: 0, y: 100}
-    - _text: MNOPQR
-      _offset: {x: 0, y: 200}
-    - _text: STUVWX
-      _offset: {x: 0, y: 300}
-    - _text: YZ
-      _offset: {x: 0, y: 400}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
