@@ -104,6 +104,8 @@ namespace TextureGeneration
             targetTexturePosition.y = Current_TextureToDrawTo.Texture.height - targetTexturePosition.y - alphabetTextureTileSize.y;
             RenderTexture renderTextureToCopy = Current_AlphabetTextureToCopy.RenderTexture;
 
+            Debug.Log($"Drawing   from position: {alphabetTexturePosition}, with tile size {alphabetTextureTileSize},     to position {targetTexturePosition}");
+
             Current_TextureToDrawTo.DrawTile(targetTexturePosition, renderTextureToCopy, alphabetTexturePosition, alphabetTextureTileSize);
         }
     }

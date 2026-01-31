@@ -199,7 +199,7 @@ Transform:
   m_GameObject: {fileID: 15638031}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.75, y: 0, z: 0}
+  m_LocalPosition: {x: 1.75, y: 0, z: 0}
   m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -445,6 +445,88 @@ MonoBehaviour:
   m_ObsoleteUseShadowQualitySettings: 0
   m_ObsoleteCustomShadowResolution: 512
   m_ObsoleteContactShadows: 0
+--- !u!1 &764245397
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 764245399}
+  - component: {fileID: 764245398}
+  m_Layer: 0
+  m_Name: AlphabetDrawerTester_Cordura
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &764245398
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 764245397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21e697584b2bc744ca74360f53df19cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _configuration:
+    _texturesPairs:
+    - _alphabetTextureToCopy:
+        _texture: {fileID: 2800000, guid: a68303563596a5c4fb5296ce41d32d7b, type: 3}
+        _depthBufferBits: 0
+        _renderTextureFormat: 0
+        _renderTextureReadWrite: 2
+      _textureToDrawTo:
+        _width: 2048
+        _height: 2048
+        _format: 5
+        _mipChain: 1
+        _linear: 1
+        _createUninitialized: 0
+        _backgroundColor: {r: 1, g: 1, b: 1, a: 0}
+    - _alphabetTextureToCopy:
+        _texture: {fileID: 2800000, guid: 9d9423fef9d2800489bb3c8f5871cb56, type: 3}
+        _depthBufferBits: 0
+        _renderTextureFormat: 0
+        _renderTextureReadWrite: 0
+      _textureToDrawTo:
+        _width: 2048
+        _height: 2048
+        _format: 5
+        _mipChain: 1
+        _linear: 1
+        _createUninitialized: 0
+        _backgroundColor: {r: 1, g: 1, b: 1, a: 0}
+    _alphabetSO: {fileID: 11400000, guid: 0421a4ff94e17914385b997cfce0a75b, type: 2}
+  _displayRenderer: {fileID: 1128086415}
+  _materialTextureProperty: _BaseColorTexture
+  _materialTextureProperty2: _NormalMapTexture
+  _autoDrawUpdate: 0
+  _textEntries:
+    _entries:
+    - _text: ABC
+      _offset: {x: 0, y: 0}
+--- !u!4 &764245399
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 764245397}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.5, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1128086417}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &825708920
 GameObject:
   m_ObjectHideFlags: 0
@@ -530,6 +612,92 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1236742297}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1128086414
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1128086417}
+  - component: {fileID: 1128086416}
+  - component: {fileID: 1128086415}
+  m_Layer: 0
+  m_Name: Quad
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!23 &1128086415
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1128086414}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: f7cff8c8369b8d640984300c50551f1a, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1128086416
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1128086414}
+  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &1128086417
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1128086414}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 764245399}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1181033096
 GameObject:
@@ -618,7 +786,7 @@ Transform:
   m_GameObject: {fileID: 1181033096}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -1}
+  m_LocalPosition: {x: 0, y: 0, z: -2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -774,7 +942,7 @@ GameObject:
   - component: {fileID: 1236742297}
   - component: {fileID: 1236742298}
   m_Layer: 0
-  m_Name: AlphabetDrawerTester
+  m_Name: AlphabetDrawerTester_Testing
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -789,7 +957,7 @@ Transform:
   m_GameObject: {fileID: 1236742296}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -1, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -811,39 +979,26 @@ MonoBehaviour:
   _configuration:
     _texturesPairs:
     - _alphabetTextureToCopy:
-        _texture: {fileID: 2800000, guid: a68303563596a5c4fb5296ce41d32d7b, type: 3}
+        _texture: {fileID: 2800000, guid: c868c2a12fc72c84da514dbc25ce7d74, type: 3}
         _depthBufferBits: 0
         _renderTextureFormat: 0
-        _renderTextureReadWrite: 0
+        _renderTextureReadWrite: 2
       _textureToDrawTo:
-        _width: 2048
-        _height: 2048
+        _width: 1024
+        _height: 512
         _format: 5
         _mipChain: 1
         _linear: 1
         _createUninitialized: 0
         _backgroundColor: {r: 1, g: 1, b: 1, a: 0}
-    - _alphabetTextureToCopy:
-        _texture: {fileID: 2800000, guid: 9d9423fef9d2800489bb3c8f5871cb56, type: 3}
-        _depthBufferBits: 0
-        _renderTextureFormat: 0
-        _renderTextureReadWrite: 0
-      _textureToDrawTo:
-        _width: 2048
-        _height: 2048
-        _format: 5
-        _mipChain: 1
-        _linear: 1
-        _createUninitialized: 0
-        _backgroundColor: {r: 1, g: 1, b: 1, a: 0}
-    _alphabetSO: {fileID: 11400000, guid: 0421a4ff94e17914385b997cfce0a75b, type: 2}
+    _alphabetSO: {fileID: 11400000, guid: 1b41dcc137a58b340930d62e28c1929d, type: 2}
   _displayRenderer: {fileID: 825708921}
   _materialTextureProperty: _BaseColorTexture
   _materialTextureProperty2: _NormalMapTexture
   _autoDrawUpdate: 0
   _textEntries:
     _entries:
-    - _text: ABCDEF
+    - _text: ABC
       _offset: {x: 0, y: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
@@ -852,4 +1007,5 @@ SceneRoots:
   - {fileID: 1181033099}
   - {fileID: 627402786}
   - {fileID: 1236742297}
+  - {fileID: 764245399}
   - {fileID: 15638034}
