@@ -982,7 +982,7 @@ MonoBehaviour:
         _texture: {fileID: 2800000, guid: c868c2a12fc72c84da514dbc25ce7d74, type: 3}
         _depthBufferBits: 0
         _renderTextureFormat: 0
-        _renderTextureReadWrite: 2
+        _renderTextureReadWrite: 0
       _textureToDrawTo:
         _width: 1024
         _height: 512
