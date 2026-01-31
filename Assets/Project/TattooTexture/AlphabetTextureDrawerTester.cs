@@ -53,8 +53,8 @@ namespace TextureGeneration
 
             // Initialize Display Material
             _displayMaterial = _displayRenderer.material;
-            if (_configuration.TexturesPairs.Length >= 1) _displayMaterial.SetTexture(_materialTextureProperty, _configuration.TexturesPairs[0].TextureToDrawTo.Texture);
-            if (_configuration.TexturesPairs.Length >= 2) _displayMaterial.SetTexture(_materialTextureProperty2, _configuration.TexturesPairs[1].TextureToDrawTo.Texture);
+            if (_configuration.TexturesPairs.Length >= 1) _displayMaterial.SetTexture(_materialTextureProperty, _configuration.TexturesPairs[0].TextureToDrawTo.DrawnRenderTexture);
+            if (_configuration.TexturesPairs.Length >= 2) _displayMaterial.SetTexture(_materialTextureProperty2, _configuration.TexturesPairs[1].TextureToDrawTo.DrawnRenderTexture);
 
             DrawTextEntries();
         }

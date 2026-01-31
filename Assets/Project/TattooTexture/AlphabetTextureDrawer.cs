@@ -46,7 +46,7 @@ namespace TextureGeneration
             foreach (TexturesPair texturesPair in _texturesPairs)
             {
                 texturesPair.AlphabetTextureToCopy.InitializeRenderTexture();
-                texturesPair.TextureToDrawTo.InitializeTexture();
+                texturesPair.TextureToDrawTo.InitializeTexture(texturesPair.AlphabetTextureToCopy.RenderTexture);
             }            
         }
 
@@ -101,7 +101,7 @@ namespace TextureGeneration
 
         private void Draw(Vector2Int targetTexturePosition, Vector2Int alphabetTextureTileSize, Vector2Int alphabetTexturePosition)
         {
-            targetTexturePosition.y = Current_TextureToDrawTo.Texture.height - targetTexturePosition.y - alphabetTextureTileSize.y;
+            targetTexturePosition.y = Current_TextureToDrawTo.DrawnRenderTexture.height - targetTexturePosition.y - alphabetTextureTileSize.y;
             RenderTexture renderTextureToCopy = Current_AlphabetTextureToCopy.RenderTexture;
 
             Current_TextureToDrawTo.DrawTile(targetTexturePosition, renderTextureToCopy, alphabetTexturePosition, alphabetTextureTileSize);

@@ -24,7 +24,7 @@ RenderSettings:
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 1
-  m_AmbientMode: 4
+  m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
   m_SkyboxMaterial: {fileID: 0}
   m_HaloStrength: 0.5
@@ -199,7 +199,7 @@ Transform:
   m_GameObject: {fileID: 15638031}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.75, y: 0, z: 0}
+  m_LocalPosition: {x: -1.25, y: 0, z: 0}
   m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -531,6 +531,90 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1236742297}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1020812211
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1020812213}
+  - component: {fileID: 1020812212}
+  m_Layer: 0
+  m_Name: AlphabetDrawer_Cordura
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1020812212
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1020812211}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21e697584b2bc744ca74360f53df19cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _configuration:
+    _texturesPairs:
+    - _alphabetTextureToCopy:
+        _texture: {fileID: 2800000, guid: d23f2a044c243a548910ed87da094735, type: 3}
+        _depthBufferBits: 0
+        _renderTextureFormat: 7
+        _renderTextureReadWrite: 2
+      _textureToDrawTo:
+        _width: 1024
+        _height: 1024
+        _readWrite: 2
+        _backgroundColor: {r: 0, g: 0, b: 0, a: 0}
+    - _alphabetTextureToCopy:
+        _texture: {fileID: 2800000, guid: 043ceccca6468eb4dac1975efa7233b7, type: 3}
+        _depthBufferBits: 0
+        _renderTextureFormat: 7
+        _renderTextureReadWrite: 2
+      _textureToDrawTo:
+        _width: 1024
+        _height: 1024
+        _readWrite: 2
+        _backgroundColor: {r: 0, g: 0, b: 0, a: 0}
+    _alphabetSO: {fileID: 11400000, guid: 58589f8818737e64b8427487efa1706e, type: 2}
+  _displayRenderer: {fileID: 1642886968}
+  _materialTextureProperty: _BaseColorTexture
+  _materialTextureProperty2: _NormalMapTexture
+  _autoDrawUpdate: 0
+  _textEntries:
+    _entries:
+    - _text: ABCDEF
+      _offset: {x: 0, y: 0}
+    - _text: GHIJKL
+      _offset: {x: 0, y: 128}
+    - _text: MNOPQR
+      _offset: {x: 0, y: 256}
+    - _text: STUVWX
+      _offset: {x: 0, y: 384}
+    - _text: YZ
+      _offset: {x: 0, y: 512}
+--- !u!4 &1020812213
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1020812211}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.75, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1642886970}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1181033096
 GameObject:
   m_ObjectHideFlags: 0
@@ -618,7 +702,7 @@ Transform:
   m_GameObject: {fileID: 1181033096}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -1}
+  m_LocalPosition: {x: 0, y: 0, z: -1.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -774,7 +858,7 @@ GameObject:
   - component: {fileID: 1236742297}
   - component: {fileID: 1236742298}
   m_Layer: 0
-  m_Name: AlphabetDrawerTester
+  m_Name: AlphabetDrawer_Testing
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -789,7 +873,7 @@ Transform:
   m_GameObject: {fileID: 1236742296}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.5, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -818,28 +902,12 @@ MonoBehaviour:
       _textureToDrawTo:
         _width: 1024
         _height: 853
-        _format: 5
-        _mipChain: 1
-        _linear: 1
-        _createUninitialized: 0
-        _backgroundColor: {r: 1, g: 1, b: 1, a: 0}
-    - _alphabetTextureToCopy:
-        _texture: {fileID: 2800000, guid: c868c2a12fc72c84da514dbc25ce7d74, type: 3}
-        _depthBufferBits: 0
-        _renderTextureFormat: 0
-        _renderTextureReadWrite: 0
-      _textureToDrawTo:
-        _width: 1024
-        _height: 853
-        _format: 5
-        _mipChain: 1
-        _linear: 1
-        _createUninitialized: 0
+        _readWrite: 0
         _backgroundColor: {r: 1, g: 1, b: 1, a: 0}
     _alphabetSO: {fileID: 11400000, guid: 1b41dcc137a58b340930d62e28c1929d, type: 2}
   _displayRenderer: {fileID: 825708921}
   _materialTextureProperty: _BaseColorTexture
-  _materialTextureProperty2: _BaseColorTexture2
+  _materialTextureProperty2: 
   _autoDrawUpdate: 0
   _textEntries:
     _entries:
@@ -853,11 +921,98 @@ MonoBehaviour:
       _offset: {x: 0, y: 300}
     - _text: YZ
       _offset: {x: 0, y: 400}
+--- !u!1 &1642886967
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1642886970}
+  - component: {fileID: 1642886969}
+  - component: {fileID: 1642886968}
+  m_Layer: 0
+  m_Name: Quad
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!23 &1642886968
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1642886967}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 9afac74611cf8c4408bf0cc56ae37c6d, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1642886969
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1642886967}
+  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &1642886970
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1642886967}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1020812213}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 1181033099}
   - {fileID: 627402786}
-  - {fileID: 1236742297}
   - {fileID: 15638034}
+  - {fileID: 1236742297}
+  - {fileID: 1020812213}
