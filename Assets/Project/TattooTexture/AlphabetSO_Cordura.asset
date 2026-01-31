@@ -72,9 +72,9 @@ MonoBehaviour:
       _widthRatio: 1
     - _character: 199
       _widthRatio: 1
-    - _character: 93
+    - _character: 42
       _widthRatio: 1
-    - _character: 94
+    - _character: 43
       _widthRatio: 1
     - _character: 95
       _widthRatio: 1
@@ -140,7 +140,7 @@ MonoBehaviour:
       _widthRatio: 1
     - _character: 126
       _widthRatio: 1
-    - _character: 42
+    - _character: 58
       _widthRatio: 1
-    - _character: 43
+    - _character: 46
       _widthRatio: 1

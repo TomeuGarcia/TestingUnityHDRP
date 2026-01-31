@@ -8,4 +8,10 @@ public class AlphabetSO : ScriptableObject
 {
     [SerializeField] private Alphabet _alphabet;
     public Alphabet Alphabet => _alphabet;
+
+
+    private void OnValidate()
+    {
+        _alphabet.Validate();
+    }
 }
